@@ -7,11 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        @foreach($tasks as $task)
-          <li>{{ $task }}</li>
-        @endforeach
-      </ul>
-      <div>{{ $foo }}</div>
+    <h1>{{$title}}</h1>
+    {!! $title !!}
 </body>
 </html>
