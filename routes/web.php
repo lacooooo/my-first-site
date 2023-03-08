@@ -16,3 +16,27 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/valtozok', function () {
+    $val = "siti";
+    return view('valtozok',[
+        'val' => $val
+    ]);
+});
+
+//Route::view('/valtozok' , 'valtozok', ['name' => 'John']);
+
+Route::get('/pass-array', function () {
+    $tasks = [
+      'Go to the store',
+      'Go to the market',
+      'Go to the work'
+    ];
+    return view('tasks-list', [
+      'tasks' => $tasks
+    ]);
+});
